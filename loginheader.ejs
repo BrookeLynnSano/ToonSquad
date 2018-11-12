@@ -1,0 +1,20 @@
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <a id="title" class="navbar-brand" href="#">Sage</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-row-reverse" id="mainNav">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#home">Home</a>
+                <a class="nav-item nav-link" href="#about">About</a>
+                <form class="form-inline" method="post" action="/login">
+                    <div class="form-group">
+                        <input name="email" class="form-control-sm" type="email" placeholder="Email" aria-label="Email" />
+                        <input name="password" class="form-control-sm" type="password" placeholder="Password" aria-label="Password" />
+                        <button class="btn btn-sm" id="login-btn" type="submit">Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
