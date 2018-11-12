@@ -1,0 +1,8 @@
+<h2>Hello {{name}}<h2>
+
+app.get('/', (request, response) => {
+  response.render('home', {
+    name: 'John'
+  })
+})
+
