@@ -1,0 +1,63 @@
+<%
+  // This is test data, remove it when we can get actual reviews
+  var reviews = [
+    {
+      number: 1,
+      title: "Best Burgers Ever!",
+      body: "Bob's Burgers simply has the best food in New York. My favorite burger is the 'Paranormal Pepperjack-tivity Burger'.",
+      date: "11/14/18",
+      stars: 5
+    },
+    {
+      number: 2,
+      title: "Rude Kids",
+      body: "The food was good, but Bob's kids are real assholes.",
+      date: "2/4/17",
+      stars: 2
+    },
+    {
+      number: 3,
+      title: "This is Teddy",
+      body: "Bobby! It's Teddy! I made a Yelp account Bobby!",
+      date: "10/12/18",
+      stars: 5
+    }
+  ]
+%>
+
+<div class="tab-pane" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+    <h1>Reviews</h1>
+    <div class="card">
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Number of Reviews</dt>
+                <dd class="col-sm-9"><%= reviews.length %></dd>
+
+                <dt class="col-sm-3">Stars</dt>
+                <dd class="col-sm-9"><%= restaurant.stars %></dd>
+            </dl>
+            <table class="table">
+              <thead>
+                  <tr>
+                      <th scope="col">Number</th>
+                      <th scope="col">Title</th>
+                      <th scope="col">Body</th>
+                      <th scope="col">Date</th>
+                      <th scope="col">Stars</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <% for (var i = 0; i < reviews.length; i++) { %>
+                    <tr>
+                        <th scope="row"><%= reviews[i].number %></th>
+                        <td><%= reviews[i].title %></td>
+                        <td><%= reviews[i].body %></td>
+                        <td><%= reviews[i].date %></td>
+                        <td><%= reviews[i].stars %></td>
+                    </tr>
+                  <% } %>
+              </tbody>
+            </table>
+        </div>
+    </div>
+</div>

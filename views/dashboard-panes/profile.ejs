@@ -1,0 +1,98 @@
+<div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+    <h1>Profile</h1>
+    <!-- User profile -->
+    <div class="card mb-3">
+        <div class="card-body">
+            <% if (user.firstName && user.lastName) { %>
+              <h4 class="card-title"><%= user.firstName %> <%= user.lastName %></h4>
+            <% } else { %>
+              <h4>User's name not found</h4>
+            <% } %>
+
+            <dl class="row">
+                <dt class="col-sm-3">Position</dt>
+                <dd class="col-sm-9"><%= user.position %></dd>
+
+                <dt class="col-sm-3">Email</dt>
+                <dd class="col-sm-9"><%= user.email %></dd>
+
+                <dt class="col-sm-3">Phone Number</dt>
+                <dd class="col-sm-9"><%= user.phone %></dd>
+            </dl>
+        </div>
+    </div>
+
+    <!-- Restaurant Profile -->
+    <div class="card mb-3">
+        <div class="card-body">
+            <% if (restaurant.name) { %>
+              <h4 class="card-title"><%= restaurant.name %></h4>
+            <% } else { %>
+                <h4 class="card-title">Restaurant name not found</h4>
+            <% } %>
+            <dl class="row">
+                <dt class="col-sm-3">Location</dt>
+                <% if (restaurant.location) { %>
+                  <dd class="col-sm-9"><%= restaurant.location %></dd>
+                <% } else { %>
+                  <dd class="col-sm-9">Location not found.</dd>
+                <% } %>
+
+                <dt class="col-sm-3">Stars</dt>
+                <% if (restaurant.stars) { %>
+                  <dd class="col-sm-9"><%= restaurant.stars %></dd>
+                <% } else { %>
+                  <dd class="col-sm-9">Stars not found.</dd>
+                <% } %>
+
+                <dt class="col-sm-3">Type of Food</dt>
+                <% if (restaurant.foodType) { %>
+                  <dd class="col-sm-9"><%= restaurant.foodType %></dd>
+                <% } else { %>
+                  <dd class="col-sm-9">Food type not found.</dd>
+                <% } %>
+
+                <dt class="col-sm-3">Attire</dt>
+                <% if (restaurant.attire) { %>
+                  <dd class="col-sm-9"><%= restaurant.attire %></dd>
+                <% } else { %>
+                  <dd class="col-sm-9">Attire not found.</dd>
+                <% } %>
+
+                <dt class="col-sm-3">Price Range</dt>
+                <% if (restaurant.priceRange) { %>
+                  <dd class="col-sm-9"><%= restaurant.priceRange %></dd>
+                <% } else { %>
+                  <dd class="col-sm-9">Price range not found.</dd>
+                <% } %>
+
+                <dt class="col-sm-3">Reservations</dt>
+                <% if (typeof restaurant.reservations != 'undefined') { %>
+                  <dd class="col-sm-9"><%= restaurant.location %></dd>
+                <% } else { %>
+                  <dd class="col-sm-9">Reservations not found.</dd>
+                <% } %>
+
+                <dt class="col-sm-3">Take Out</dt>
+                <% if (typeof restaurant.takeOut != 'undefined') { %>
+                  <dd class="col-sm-9"><%= restaurant.takeOut %></dd>
+                <% } else { %>
+                  <dd class="col-sm-9">Take Out not found.</dd>
+                <% } %>
+
+                <dt class="col-sm-3">Delivery</dt>
+                <% if (typeof restaurant.delivery != 'undefined') { %>
+                  <dd class="col-sm-9"><%= restaurant.delivery %></dd>
+                <% } else { %>
+                  <dd class="col-sm-9">Delivery not found.</dd>
+                <% } %>
+
+                <dt class="col-sm-3">Good for Kids</dt>
+                <% if (typeof restaurant.reservations != 'undefined') { %>
+                  <dd class="col-sm-9"><%= restaurant.kids %></dd>
+                <% } else { %>
+                  <dd class="col-sm-9">Kids not found.</dd>
+                <% } %>
+            </dl>
+        </div>
+    </div>
